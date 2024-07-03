@@ -8,4 +8,11 @@ use App\Http\Controllers\AuthController;
 //     return $request->user();
 // })->middleware('auth:sanctum');
 
+Route::middleware('auth:sanctum')->group(function() {
+    Route::get('logout',[AuthController::class,'logout']);
+});
+
+
+
+Route::post('login',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);
