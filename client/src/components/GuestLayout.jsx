@@ -5,7 +5,6 @@ export default function GuestLayout() {
     return (
         <div>
             <div>
-                Layout
             </div>
             <Outlet />
         </div>
